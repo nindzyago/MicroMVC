@@ -47,7 +47,7 @@ class User {
         $req = $db->query('SELECT * FROM user');
 
         foreach($req->fetchAll() as $user) {
-        $list[] = new User($user['id'], $user['name'], $user['username'], $user['email'], $user['address']);
+        $list[] = new User($user['id'], $user['name'], $user['username'], $user['password'], $user['email'], $user['address']);
         }
 
         return $list;

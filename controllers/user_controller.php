@@ -28,6 +28,7 @@ class UserController {
         $result = User::register($user);
         if ($result == 'success') {
             echo "OK";
+            $users = User::all();
             require_once('views/user/index.php');
         } else {
             echo $result;
